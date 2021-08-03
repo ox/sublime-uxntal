@@ -8,9 +8,6 @@ real_intrinsics = ["BRK", "BRK2", "LIT", "LIT2", "POP", "POP2", "DUP", "DUP2", "
 intrinsics = ["DEO"]
 
 class InlineDocsHover(sublime_plugin.EventListener):
-    def on_load(self, view):
-        sublime.message_dialog("Hello world")
-
     def on_hover(self, view, point, hover_zone):
         if "uxntal" not in view.settings().get('syntax'):
             return
