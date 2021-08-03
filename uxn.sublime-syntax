@@ -1,0 +1,75 @@
+%YAML 1.2
+---
+name: uxntal
+file_extensions:
+  - tal
+scope: source.uxn
+
+contexts:
+  main:
+    - include: comments
+    - include: constants
+    - include: labels
+    # - include: macro
+    - include: control
+    - include: mem-pad
+
+  constants:
+    - include: constants-char
+    - include: constants-hex
+
+  constants-char:
+    - match: \'(?i:\w|\d)
+      scope: string.quoted.single.uxntal
+
+  constants-hex:
+    - match: \#[0-9a-f]+
+      scope: constant.numeric.uxntal
+
+  comments:
+    - match: \(\s
+      scope: comment.uxntal
+      push: comments-content
+
+  comments-content:
+    - meta_scope: comment.block.uxntal
+    - match: \s*\)
+      scope: comment.uxntal
+      pop: 1
+
+  labels:
+    - include: labels-main
+    - include: labels-sub
+    - include: labels-skip
+    - include: labels-ref
+
+  labels-main:
+    - match: '\@.*? '
+      scope: constant.language.uxntal
+
+  labels-sub:
+    - match: '&.*?\s+'
+      scope: constant.language.uxntal
+
+  labels-skip:
+    - match: \$\d+
+      scope: constant.numeric.integer.uxntal
+
+  labels-ref:
+    - match: '(\.|,|\;).*?(\/.*?)? '
+      scope: entity.name.function.uxntal
+
+  # macro:
+  #   - include: macro-def
+
+  # macro-def:
+  #   - match: '\%.+? '
+  #     scope: keyword.declaration.function.uxntal
+
+  control:
+    - match: \b(?i:BRK|LIT|POP|DUP|SWP|OVR|ROT|EQU|NEQ|GTH|LTH|JMP|JCN|JSR|STH|LDZ|STZ|LDR|STR|LDA|STA|DEI|DEO|ADD|SUB|MUL|DIV|AND|ORA|EOR|SFT)2?(k|r)?\b
+      scope: keyword.control.uxntal
+
+  mem-pad:
+    - match: \|[0-9a-f]{2,4}
+      scope: constant.numeric.integer.hexadecimal.uxntal
