@@ -5,4 +5,4 @@
 
 ## Installation
 
-Currently this syntax isn't available through Package Control. Install it by adding it to your User package.
+Currently this syntax isn't available through Package Control. Install it by cloning the `sublime-uxntal` folder into your Packages folder.
