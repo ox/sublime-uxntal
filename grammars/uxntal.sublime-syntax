@@ -44,8 +44,9 @@ contexts:
     - include: labels-ref
 
   labels-main:
-    - match: '\@.*? '
-      scope: constant.language.uxntal
+    - match: '\@(.*?)[\s\[\]]'
+      captures:
+        1: constant.language.uxntal
 
   labels-sub:
     - match: '&.*?\s+'
