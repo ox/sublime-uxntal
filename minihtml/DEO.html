@@ -1,6 +1,8 @@
-<code>DEO$flags ( val a )</code>
+<code><b>DEO</b>$flags ( val a -- )</code>
+<p>Writes a value to a device address</p>
 
-<h4>Device Output</h4>
-<p>
-  <code>DEO</code> writes out to a device.
-</p>
+<h4>Example</h4>
+<pre><code>
+|18 @Console/write<br>
+|100 #41 .Console/write DEO ( prints A )
+</code></pre>

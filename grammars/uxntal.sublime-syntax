@@ -10,7 +10,7 @@ contexts:
     - include: comments
     - include: constants
     - include: labels
-    # - include: macro
+    - include: macro
     - include: control
     - include: mem-pad
 
@@ -57,19 +57,19 @@ contexts:
       scope: constant.numeric.integer.uxntal
 
   labels-ref:
-    - match: '(\.|,|\;).*?(\/.*?)? '
+    - match: '(\.|,|\;).*?(?:\/.*?)[\s$]'
       scope: entity.name.function.uxntal
 
-  # macro:
-  #   - include: macro-def
+  macro:
+    - include: macro-def
 
-  # macro-def:
-  #   - match: '\%.+? '
-  #     scope: keyword.declaration.function.uxntal
+  macro-def:
+    - match: '\%.+? '
+      scope: keyword.declaration.function.uxntal
 
   control:
     - match: \b(?i:BRK|LIT|POP|DUP|SWP|OVR|ROT|EQU|NEQ|GTH|LTH|JMP|JCN|JSR|STH|LDZ|STZ|LDR|STR|LDA|STA|DEI|DEO|ADD|SUB|MUL|DIV|AND|ORA|EOR|SFT)2?(k|r|kr|rk)?\b
-      scope: keyword.control.uxntal
+      scope: keyword.function.uxntal
 
   mem-pad:
     - match: \|[0-9a-f]{2,4}
