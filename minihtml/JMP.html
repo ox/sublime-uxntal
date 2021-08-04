@@ -1,0 +1,11 @@
+<code><b>JMP</b><i>$flags</i> ( addr -- )</code>
+<p>Unconditionally jump to an address</p>
+
+<h4>Example</h4>
+<pre><code>
+,&amp;some-operation JMP<br>
+BRK<br>
+&amp;some-operation ( -> )<br>
+&nbsp;&nbsp;( we&apos;re here )<br>
+BRK<br>
+</code></pre>
