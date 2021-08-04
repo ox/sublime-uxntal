@@ -44,7 +44,7 @@ contexts:
     - include: labels-ref
 
   labels-main:
-    - match: '\@(.*?)[\s\[\]]'
+    - match: '(\@.*?)[\s\[\]]'
       captures:
         1: constant.language.uxntal
 
