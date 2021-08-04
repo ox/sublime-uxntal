@@ -23,8 +23,18 @@ contexts:
       scope: string.quoted.single.uxntal
 
   constants-hex:
+    - include: constants-hex-lit
+    - include: constants-hex-literal
+
+  constants-hex-literal:
     - match: \#[0-9a-f]+
       scope: constant.numeric.uxntal
+
+  constants-hex-lit:
+    - match: '(LIT) ([0-9a-f]{4}|[0-9a-f]{2})'
+      captures:
+        1: keyword.function.uxntal
+        2: constant.numeric.uxntal
 
   comments:
     - match: \(\s
