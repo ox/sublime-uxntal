@@ -1,7 +1,7 @@
 # sublime-uxntal
 [`uxntal`](https://wiki.xxiivv.com/site/uxntal.html) syntax highlighter for Sublime Text 3/4. PRs with better syntax scopes and rules are greatly appreciated. There is also a nascant on-hover documentation feature.
 
-<img width="756" alt="Screen Shot 2021-08-03 at 11 58 32 AM" src="https://user-images.githubusercontent.com/103545/128047737-bb8260a8-fad3-49b4-8ef9-5d3b98ec34d6.png">
+<img width="937" alt="Screen Shot 2021-08-04 at 3 58 01 PM" src="https://user-images.githubusercontent.com/103545/128246592-9f86a2c0-0343-4e3b-b57a-5ea9514d9ae5.png">
 
 ## Installation
 
