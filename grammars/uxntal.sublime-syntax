@@ -3,7 +3,7 @@
 name: uxntal
 file_extensions:
   - tal
-scope: source.uxn
+scope: source.uxntal
 
 contexts:
   main:
@@ -67,7 +67,7 @@ contexts:
   #     scope: keyword.declaration.function.uxntal
 
   control:
-    - match: \b(?i:BRK|LIT|POP|DUP|SWP|OVR|ROT|EQU|NEQ|GTH|LTH|JMP|JCN|JSR|STH|LDZ|STZ|LDR|STR|LDA|STA|DEI|DEO|ADD|SUB|MUL|DIV|AND|ORA|EOR|SFT)2?(k|r)?\b
+    - match: \b(?i:BRK|LIT|POP|DUP|SWP|OVR|ROT|EQU|NEQ|GTH|LTH|JMP|JCN|JSR|STH|LDZ|STZ|LDR|STR|LDA|STA|DEI|DEO|ADD|SUB|MUL|DIV|AND|ORA|EOR|SFT)2?(k|r|kr|rk)?\b
       scope: keyword.control.uxntal
 
   mem-pad:

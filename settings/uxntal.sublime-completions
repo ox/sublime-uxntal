@@ -1,0 +1,160 @@
+{
+  "scope": "source.uxntal",
+  "completions": [
+    {
+      "trigger": "BRK",
+      "contents": "BRK",
+      "annotation": "Break",
+    },
+    {
+      "trigger": "LIT",
+      "contents": "LIT",
+      "annotation": "Literal",
+    },
+    {
+      "trigger": "POP",
+      "contents": "POP",
+      "annotation": "Pop ( a )",
+    },
+    {
+      "trigger": "DUP",
+      "contents": "DUP",
+      "annotation": "Duplicate ( a ) a a",
+    },
+    {
+      "trigger": "SWP",
+      "contents": "SWP",
+      "annotation": "Swap ( a b ) b a",
+    },
+    {
+      "trigger": "OVR",
+      "contents": "OVR",
+      "annotation": "Over ( a b ) a b a",
+    },
+    {
+      "trigger": "ROT",
+      "contents": "ROT",
+      "annotation": "Rotate ( a b c ) b c a",
+    },
+    {
+      "trigger": "EQU",
+      "contents": "EQU",
+      "annotation": "Equal ( a b ) flag",
+    },
+    {
+      "trigger": "NEQ",
+      "contents": "NEQ",
+      "annotation": "Not Equal ( a b ) flag",
+    },
+    {
+      "trigger": "GTH",
+      "contents": "GTH",
+      "annotation": "Greater Than ( a b ) flag",
+    },
+    {
+      "trigger": "LTH",
+      "contents": "LTH",
+      "annotation": "Less Than ( a b ) flag",
+    },
+    {
+      "trigger": "JMP",
+      "contents": "JMP",
+      "annotation": "Jump ( a )",
+    },
+    {
+      "trigger": "JCN",
+      "contents": "JCN",
+      "annotation": "Jump Condition ( flag a )",
+    },
+    {
+      "trigger": "JSR",
+      "contents": "JSR",
+      "annotation": "Jump Stash ( a ) rs",
+    },
+    {
+      "trigger": "STH",
+      "contents": "STH",
+      "annotation": "Stash ( a ) rs",
+    },
+    {
+      "trigger": "LDZ",
+      "contents": "LDZ",
+      "annotation": "Load Zeropage ( a ) val",
+    },
+    {
+      "trigger": "STZ",
+      "contents": "STZ",
+      "annotation": "Store Zeropage ( val a )",
+    },
+    {
+      "trigger": "LDR",
+      "contents": "LDR",
+      "annotation": "Load Relative ( a ) val",
+    },
+    {
+      "trigger": "STR",
+      "contents": "STR",
+      "annotation": "Store Relative ( val a )",
+    },
+    {
+      "trigger": "LDA",
+      "contents": "LDA",
+      "annotation": "Load Absolute ( a* ) val",
+    },
+    {
+      "trigger": "STA",
+      "contents": "STA",
+      "annotation": "Store Absolute ( val a* )",
+    },
+    {
+      "trigger": "DEI",
+      "contents": "DEI",
+      "annotation": "Device In ( a ) val",
+    },
+    {
+      "trigger": "DEO",
+      "contents": "DEO",
+      "annotation": "Device Out ( val a )",
+    },
+    {
+      "trigger": "ADD",
+      "contents": "ADD",
+      "annotation": "Add ( a b ) res",
+    },
+    {
+      "trigger": "SUB",
+      "contents": "SUB",
+      "annotation": "Subtract ( a b ) res",
+    },
+    {
+      "trigger": "MUL",
+      "contents": "MUL",
+      "annotation": "Multiply ( a b ) res",
+    },
+    {
+      "trigger": "DIV",
+      "contents": "DIV",
+      "annotation": "Divide ( a b ) res",
+    },
+    {
+      "trigger": "AND",
+      "contents": "AND",
+      "annotation": "And ( a b ) res",
+    },
+    {
+      "trigger": "ORA",
+      "contents": "ORA",
+      "annotation": "Or ( a b ) res",
+    },
+    {
+      "trigger": "EOR",
+      "contents": "EOR",
+      "annotation": "XOr ( a b ) res",
+    },
+    {
+      "trigger": "SFT",
+      "contents": "SFT",
+      "annotation": "Shift ( a b ) res",
+    },
+  ],
+} 

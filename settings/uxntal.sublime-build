@@ -1,0 +1,14 @@
+{
+  "shell_cmd": "uxnasm \"$file\" \"$file_base_name.rom\"",
+  "file_patterns": [ "*.tal" ],
+  "variants": [
+    {
+      "name": "Run CLI",
+      "shell_cmd": "uxnasm \"$file\" \"$file_base_name.rom\" && uxncli \"$file_base_name.rom\"",
+    },
+    {
+      "name": "Run Emulator",
+      "shell_cmd": "uxnasm \"$file\" \"$file_base_name.rom\" && uxnemu \"$file_base_name.rom\"",
+    },
+  ],
+}

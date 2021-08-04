@@ -1,11 +1,9 @@
-# stolen from https://github.com/315234/SublimeFortran/blob/master/InlineDocsHover.py
+# stolen from https://github.c4SublimeFortran/blob/master/InlineDocsHover.py
 
 import sublime
 import sublime_plugin
 
-real_intrinsics = ["BRK", "BRK2", "LIT", "LIT2", "POP", "POP2", "DUP", "DUP2", "SWP", "SWP2", "OVR", "OVR2", "ROT", "ROT2", "EQU", "EQU2", "NEQ", "NEQ2", "GTH", "GTH2", "LTH", "LTH2", "JMP", "JMP2", "JCN", "JCN2", "JSR", "JSR2", "STH", "STH2", "LDZ", "LDZ2", "STZ", "STZ2", "LDR", "LDR2", "STR", "STR2", "LDA", "LDA2", "STA", "STA2", "DEI", "DEI2", "DEO", "DEO2", "ADD", "ADD2", "SUB", "SUB2", "MUL", "MUL2", "DIV", "DIV2", "AND", "AND2", "ORA", "ORA2", "EOR", "EOR2", "SFT", "SFT2"]
-
-intrinsics = ["DEO"]
+intrinsics = ["BRK","LIT","POP","DUP","SWP","OVR","ROT","EQU","NEQ","GTH","LTH","JMP","JCN","JSR","STH","LDZ","STZ","LDR","STR","LDA","STA","DEI","DEO","ADD","SUB","MUL","DIV","AND","ORA","EOR","SFT"]
 
 class InlineDocsHover(sublime_plugin.EventListener):
     def on_hover(self, view, point, hover_zone):
@@ -16,7 +14,7 @@ class InlineDocsHover(sublime_plugin.EventListener):
         if hover_zone != sublime.HOVER_TEXT:
             return
         wordregion = view.word(point)
-        word = view.substr(wordregion).upper()
+        word = view.substr(wordregion).upper()[:3]
         self.show_doc_popup(view, point, word)
 
     def show_doc_popup(self, view, point, word):
