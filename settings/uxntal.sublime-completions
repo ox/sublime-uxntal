@@ -1,5 +1,8 @@
 {
   "scope": "source.uxntal",
+  "settings": {
+    "auto_complete_use_index": false,
+  },
   "completions": [
     {
       "trigger": "BRK",
