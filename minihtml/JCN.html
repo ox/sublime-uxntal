@@ -1,0 +1,10 @@
+<code><b>JCN</b><i>$flags</i> ( flag addr -- )</code>
+<p>Jump to an address if the second value is 01</p>
+
+<h4>Example</h4>
+<pre><code>
+#00 #00 EQU ,&there JCN<br>
+BRK<br>
+&there ( -> )<br>
+( we are here )
+</code></pre>
