@@ -1,7 +1,7 @@
 # sublime-uxntal
 This packages provides syntax highlighting, autocomplete support, and on-hover documentation in Sublime Text 4 for the [`uxntal`](https://wiki.xxiivv.com/site/uxntal.html) language.
 
-<img width="906" alt="Screen Shot 2021-08-04 at 4 04 30 PM" src="https://user-images.githubusercontent.com/103545/128247399-14be6076-17d0-4295-8838-a9c44a569267.png">
+<img width="894" alt="Screen Shot 2021-08-04 at 4 06 06 PM" src="https://user-images.githubusercontent.com/103545/128247569-5e73f2c1-0201-41c1-b885-265021dbffef.png">
 
 ## Installation
 
