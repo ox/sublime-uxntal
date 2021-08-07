@@ -1,22 +1,18 @@
 [
     {
-        "caption": "Uxn Assembly: Bin to Byte",
-        "command": "bin_to_byte",
+        "caption": "Uxn Assembly: Bin to Hex",
+        "command": "bin_to_hex",
     },
     {
-        "caption": "Uxn Assembly: Bin to Short",
-        "command": "bin_to_short",
+        "caption": "Uxn Assembly: Hex to Bin",
+        "command": "hex_to_bin",
     },
     {
-        "caption": "Uxn Assembly: Byte to Bin",
-        "command": "byte_to_bin",
+        "caption": "Uxn Assembly: Hex to Int",
+        "command": "hex_to_int",
     },
     {
-        "caption": "Uxn Assembly: Short to Bin",
-        "command": "short_to_bin",
-    },
-    {
-        "caption": "Uxn Assembly: Int to Byte",
-        "command": "int_to_byte",
+        "caption": "Uxn Assembly: Int to Hex",
+        "command": "int_to_hex",
     },
 ]
