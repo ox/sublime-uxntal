@@ -1,6 +1,8 @@
 %YAML 1.2
 ---
-name: uxntal
+# some regex adapted from
+# https://git.sr.ht/~rabbits/uxn/tree/master/item/etc/tal.sublime-syntax
+name: Uxn Assembly
 file_extensions:
   - tal
 scope: source.uxntal
@@ -9,6 +11,7 @@ contexts:
   main:
     - include: comments
     - include: constants
+    - include: stack
     - include: labels
     - include: macro
     - include: control
@@ -20,7 +23,7 @@ contexts:
 
   constants-char:
     - match: \'(?i:\w|\d)
-      scope: string.quoted.single.uxntal
+      scope: string.quoted.single
 
   constants-hex:
     - include: constants-hex-lit
@@ -28,23 +31,27 @@ contexts:
 
   constants-hex-literal:
     - match: \#[0-9a-f]+
-      scope: constant.numeric.uxntal
+      scope: constant.numeric
 
   constants-hex-lit:
     - match: '(LIT) ([0-9a-f]{4}|[0-9a-f]{2})'
       captures:
-        1: keyword.function.uxntal
-        2: constant.numeric.uxntal
+        1: keyword.function
+        2: constant.numeric
+
+  stack:
+    - match: '\"(\S+)\s?'
+      scope: variable.parameter.option
 
   comments:
     - match: \(\s
-      scope: comment.uxntal
+      scope: comment
       push: comments-content
 
   comments-content:
-    - meta_scope: comment.block.uxntal
+    - meta_scope: comment.block
     - match: \s*\)
-      scope: comment.uxntal
+      scope: comment
       pop: 1
 
   labels:
@@ -54,33 +61,39 @@ contexts:
     - include: labels-ref
 
   labels-main:
-    - match: '(\@.*?)[\s\[\]]'
+    - match: '(\@\S+)\s?'
       captures:
-        1: constant.language.uxntal
+        1: constant.language
 
   labels-sub:
     - match: '&.*?\s+'
-      scope: constant.language.uxntal
+      scope: constant.language
 
   labels-skip:
     - match: \$\d+
-      scope: constant.numeric.integer.uxntal
+      scope: constant.numeric.integer
 
   labels-ref:
-    - match: '(\.|,|\;).*?(?:\/.*?)[\s$]'
-      scope: entity.name.function.uxntal
+    - match: '\.(\S+)\s?'     # zero-page
+      scope: variable.function
+    - match: '\,(\S+)\s?'     # relative
+      scope: entity.name.tag
+    - match: '\;(\S+)\s?'     # absolute
+      scope: keyword.control
+    - match: '\:(\S+)\s?'     # raw
+      scope: keyword.control
 
   macro:
     - include: macro-def
 
   macro-def:
     - match: '\%.+? '
-      scope: keyword.declaration.function.uxntal
+      scope: keyword.declaration.function
 
   control:
     - match: \b(?i:BRK|LIT|POP|DUP|SWP|OVR|ROT|EQU|NEQ|GTH|LTH|JMP|JCN|JSR|STH|LDZ|STZ|LDR|STR|LDA|STA|DEI|DEO|ADD|SUB|MUL|DIV|AND|ORA|EOR|SFT)2?(k|r|kr|rk)?\b
-      scope: keyword.function.uxntal
+      scope: keyword.function
 
   mem-pad:
     - match: \|[0-9a-f]{2,4}
-      scope: constant.numeric.integer.hexadecimal.uxntal
+      scope: entity.name.tag.structure.any
