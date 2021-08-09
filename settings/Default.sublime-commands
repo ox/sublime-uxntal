@@ -12,7 +12,15 @@
         "command": "hex_to_int",
     },
     {
+        "caption": "Uxn Assembly: Hex to String",
+        "command": "hex_to_string",
+    },
+    {
         "caption": "Uxn Assembly: Int to Hex",
         "command": "int_to_hex",
+    },
+    {
+        "caption": "Uxn Assembly: String to Hex",
+        "command": "string_to_hex",
     },
 ]
